@@ -17,6 +17,6 @@ Deploy
     docker run -d --name=strider \
         --link strider-mongo:mongo \
         --env="DB_URI=mongodb://mongo/strider" \
-        --env="PLUGIN_BITBUCKET_HOSTNAME=http://you.site.com" \
+        --env="PLUGIN_BITBUCKET_HOSTNAME=http://your.site.com" \
         --publish 80:3000 \
         m00t/strider
