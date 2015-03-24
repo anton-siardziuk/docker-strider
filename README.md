@@ -12,10 +12,11 @@ Deploy
         --link strider-mongo:mongo \
         --env="DB_URI=mongodb://mongo/strider" \
         m00t/strider \
-        strider addUser -l your_email_here@gmail.com -a
+        strider addUser
     
-    docker run -d \
+    docker run -d --name=strider \
         --link strider-mongo:mongo \
         --env="DB_URI=mongodb://mongo/strider" \
-        --publish 3000:3000 \
+        --env="PLUGIN_BITBUCKET_HOSTNAME=http://you.site.com" \
+        --publish 80:3000 \
         m00t/strider
