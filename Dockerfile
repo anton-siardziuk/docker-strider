@@ -7,6 +7,6 @@ RUN apt-get install -y nodejs npm git
 
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
-RUN npm install -g strider@1.6.4
+RUN npm install -g strider@1.6.3
 
 CMD ["strider"]
